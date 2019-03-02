@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     # My Apps
     'contacts',
     'page',
+    'inventory',
 ]
 
 MIDDLEWARE = [
