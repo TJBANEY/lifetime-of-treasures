@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+from inventory.models import InventoryItem, Category
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    model = Category
+
+@admin.register(InventoryItem)
+class InventoryAdmin(admin.ModelAdmin):
+    model = InventoryItem

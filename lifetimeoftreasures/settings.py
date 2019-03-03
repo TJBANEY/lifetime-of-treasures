@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Third Party
 
     # My Apps
+    'lifetimeoftreasures',
     'contacts',
     'page',
     'inventory',

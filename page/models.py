@@ -1,6 +1,34 @@
 from django.db import models
 
-# Create your models here.
+class NavigationLink(models.Model):
+    name = models.CharField(max_length=255)
+    page = models.ForeignKey("SitePage", null=True, on_delete=models.SET_NULL)
+
+    display_order = models.IntegerField(default=1)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ("display_order", "name")
+        verbose_name = "Navigation Link"
+        verbose_name_plural = "Navigation Links"
+
+class SubNavigationLink(models.Model):
+    name = models.CharField(max_length=255)
+    page = models.ForeignKey("SitePage", null=True, on_delete=models.CASCADE)
+
+    display_order = models.IntegerField(default=1)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ("display_order", "name")
+        verbose_name = ""
+        verbose_name_plural = ""
 
 class SitePage(models.Model):
     name = models.CharField(max_length=255, help_text="Label for your page")
