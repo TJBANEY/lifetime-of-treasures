@@ -5,54 +5,13 @@
     <title>title</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/less/main.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<style>
-    .container span.link-left {
-        letter-spacing: .4px;
-        margin-right: 11%;
-        font-weight: 100;
-        font-size: 14px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        .navigation.container {
-            max-width: 960px!important;
-        }
-    }
-
-    .container span.link-right {
-        letter-spacing: .4px;
-        margin-left: 11%;
-        font-weight: 100;
-        font-size: 14px;
-        float: right;
-    }
-
-    .title .first, .title .third {
-        font-size: 18px;
-    }
-
-    .title .first {
-        letter-spacing: 6.5px;
-    }
-
-    .title .third {
-        letter-spacing: 4px;
-    }
-
-    .title .second {
-        font-size: 18px;
-        letter-spacing: .4px;
-        color: #CCA43A;
-        font-style: italic;
-        padding: 0 12px 0 8px;
-    }
-</style>
 <div id="navigation-header" style="color: white; padding: 30px 0; width: 100%; background: #091D45;">
     <div class="navigation container" style="padding: 0;">
             <span class="link-left">
@@ -73,20 +32,29 @@
     </div>
 </div>
 
-<div class="hero-landing" style="height: 500px; background-color: lime; width: 100%;">
-    <div class="container">
-        <p style="padding: 0; text-align: left;">What The Site Is</p>
+<div id="hero" class="landing-section col-xs-12">
+    <div id="hero-text-box">
+        <h3>What this site is</h3>
+        <p class="text-left">
+            Aenean lacinia bibendum nulla sed consectetur. 
+            Sed posuere consectetur est at lobortis. Maecenas 
+            sed diam eget risus varius blandit sit amet non 
+            magna. Donec sed odio dui.
+        </p>
+        <button>
+            Browse Catalog
+        </button>
     </div>
 </div>
-<div class="gallery-landing" style="height: 550px; background-color: orange; width: 100%;">
+<div id="gallery" class="landing-section col-xs-12">
 </div>
-<div class="service-landing" style="height: 550px; background-color: blue; width: 100%;">
+<div id="service" class="landing-section col-xs-12">
 </div>
-<div class="about-us-landing" style="height: 550px; background-color: red; width: 100%;">
+<div id="about-us" class="landing-section col-xs-12">
 </div>
 
-<div class="site-footer" style="padding: 95px 0; background-color: #141414;">
-
+<div id="site-footer">
 </div>
+
 </body>
 </html>

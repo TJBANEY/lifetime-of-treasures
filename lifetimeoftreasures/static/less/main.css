@@ -1,0 +1,81 @@
+@media screen and (min-width: 1200px) {
+  #navigation-header .container.navigation {
+    max-width: 960px!important;
+  }
+}
+#navigation-header .container span.link-left {
+  letter-spacing: .4px;
+  margin-right: 11%;
+  font-weight: 100;
+  font-size: 14px;
+}
+#navigation-header .container span.link-right {
+  letter-spacing: .4px;
+  margin-left: 11%;
+  font-weight: 100;
+  font-size: 14px;
+  float: right;
+}
+#navigation-header .container span.title {
+  font-size: 18px;
+}
+#navigation-header .container span.title .first {
+  letter-spacing: 6.5px;
+}
+#navigation-header .container span.title .second {
+  letter-spacing: .4px;
+  color: #CCA43A;
+  font-style: italic;
+  padding: 0 12px 0 8px;
+}
+#navigation-header .container span.title .third {
+  letter-spacing: 4px;
+}
+.landing-section {
+  min-height: 550px;
+}
+.landing-section#hero {
+  background-color: #091D45;
+  padding: 130px 150px;
+}
+.landing-section#hero #hero-text-box {
+  width: 560px;
+  min-height: 150px;
+  color: white;
+}
+.landing-section#hero #hero-text-box h3 {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 41px;
+}
+.landing-section#hero #hero-text-box p {
+  margin: 0;
+  line-height: 32px;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+.landing-section#hero #hero-text-box button {
+  padding: 12px 20px;
+  background-color: #CCA43A;
+  border: none;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: .4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+.landing-section#gallery {
+  background-color: orange;
+}
+.landing-section#service {
+  background-color: blue;
+}
+.landing-section #about-us {
+  background-color: red;
+}
+.landing-section #site-footer {
+  padding: 95px 0;
+  background-color: #141414;
+}
