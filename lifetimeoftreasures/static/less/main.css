@@ -1,3 +1,23 @@
+/**** Globals ****/
+button {
+  padding: 12px 20px;
+  border: none;
+  line-height: 19px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: .4px;
+  font-weight: 500;
+  color: white;
+}
+.gold {
+  background-color: #CCA43A;
+}
+.blue {
+  background-color: #091D45;
+}
+.mgn-top-forty {
+  margin-top: 40px;
+}
 @media screen and (min-width: 1200px) {
   #navigation-header .container.navigation {
     max-width: 960px!important;
@@ -5,31 +25,26 @@
 }
 #navigation-header .container span.link-left {
   letter-spacing: .4px;
-  margin-right: 11%;
+  margin-right: 10%;
   font-weight: 100;
   font-size: 14px;
 }
 #navigation-header .container span.link-right {
   letter-spacing: .4px;
-  margin-left: 11%;
+  margin-left: 10%;
   font-weight: 100;
   font-size: 14px;
   float: right;
 }
 #navigation-header .container span.title {
   font-size: 18px;
-}
-#navigation-header .container span.title .first {
-  letter-spacing: 6.5px;
+  letter-spacing: 4px;
 }
 #navigation-header .container span.title .second {
   letter-spacing: .4px;
   color: #CCA43A;
   font-style: italic;
   padding: 0 12px 0 8px;
-}
-#navigation-header .container span.title .third {
-  letter-spacing: 4px;
 }
 .landing-section {
   min-height: 550px;
@@ -55,19 +70,58 @@
   font-weight: 300;
   margin-bottom: 48px;
 }
-.landing-section#hero #hero-text-box button {
-  padding: 12px 20px;
-  background-color: #CCA43A;
-  border: none;
-  line-height: 19px;
+.landing-section#gallery {
+  background-color: #F9F9F9;
+  padding: 60px 148px;
+}
+.landing-section#gallery h4 {
+  width: 100%;
+  color: #CCA43A;
   text-align: center;
-  letter-spacing: .4px;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  margin-bottom: 30px;
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card {
+  border: 1px solid #b7b7b7;
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .image {
+  height: 315px;
+  background-size: cover;
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .image.one {
+  background-image: url("/static/images/stock/lamp.jpg");
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .image.two {
+  background-image: url("/static/images/stock/chair.jpg");
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .image.three {
+  background-image: url("/static/images/stock/horse.jpg");
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .image.four {
+  background-image: url("/static/images/stock/armoire.jpg");
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .info {
+  height: 80px;
+  padding: 20px;
+  background: white;
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .info .name,
+.landing-section#gallery .gallery-item-container .gallery-item-card .info .price {
+  display: block;
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .info .name {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #192C54;
+}
+.landing-section#gallery .gallery-item-container .gallery-item-card .info .price {
   font-size: 16px;
   font-weight: 500;
-  color: white;
-}
-.landing-section#gallery {
-  background-color: orange;
+  line-height: 21px;
+  color: #CCA43A;
 }
 .landing-section#service {
   background-color: blue;
