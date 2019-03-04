@@ -18,33 +18,61 @@ button {
 .mgn-top-forty {
   margin-top: 40px;
 }
+/*****************/
 @media screen and (min-width: 1200px) {
-  #navigation-header .container.navigation {
-    max-width: 960px!important;
+  #navigation-header .container.navigation,
+  #site-footer .container.navigation,
+  #navigation-header .container.footer,
+  #site-footer .container.footer {
+    max-width: 960px !important;
   }
 }
-#navigation-header .container span.link-left {
+#navigation-header .container span.link-left,
+#site-footer .container span.link-left,
+#navigation-header .container span.link-right,
+#site-footer .container span.link-right {
   letter-spacing: .4px;
-  margin-right: 10%;
   font-weight: 100;
-  font-size: 14px;
+  font-size: 16px;
 }
-#navigation-header .container span.link-right {
-  letter-spacing: .4px;
-  margin-left: 10%;
-  font-weight: 100;
-  font-size: 14px;
-  float: right;
+#navigation-header .container span.link-left,
+#site-footer .container span.link-left {
+  text-align: left;
 }
-#navigation-header .container span.title {
-  font-size: 18px;
+#navigation-header .container span.link-right,
+#site-footer .container span.link-right {
+  text-align: right;
+}
+#navigation-header .container span.title,
+#site-footer .container span.title {
   letter-spacing: 4px;
+  padding: 0;
+  text-align: center;
 }
-#navigation-header .container span.title .second {
+#navigation-header .container span.title .second,
+#site-footer .container span.title .second {
   letter-spacing: .4px;
   color: #CCA43A;
   font-style: italic;
   padding: 0 12px 0 8px;
+}
+#navigation-header {
+  color: white;
+  padding: 30px 0;
+  background: #091D45;
+  margin-bottom: -1px;
+}
+@media screen and (min-width: 992px) {
+  #navigation-header {
+    margin-bottom: 0;
+  }
+}
+#navigation-header span.link-left,
+#navigation-header span.link-right {
+  padding: 0;
+}
+#navigation-header span.title {
+  font-size: 18px;
 }
 .landing-section {
   min-height: 550px;
@@ -84,7 +112,7 @@ button {
   margin-bottom: 30px;
 }
 .landing-section#gallery .gallery-item-container .gallery-item-card {
-  border: 1px solid #b7b7b7;
+  border: 1px solid #c3c3c3;
 }
 .landing-section#gallery .gallery-item-container .gallery-item-card .image {
   height: 315px;
@@ -123,13 +151,59 @@ button {
   line-height: 21px;
   color: #CCA43A;
 }
-.landing-section#service {
-  background-color: blue;
+/**** CUSTOM SECTIONS ****/
+.two-section-image-right .left,
+.two-section-image-left .left,
+.two-section-image-right .right,
+.two-section-image-left .right {
+  height: 640px;
 }
-.landing-section #about-us {
-  background-color: red;
+.two-section-image-right .content h3,
+.two-section-image-left .content h3 {
+  line-height: 41px;
+  color: #CCA43A;
+  font-weight: 500;
+  font-size: 34px;
 }
-.landing-section #site-footer {
+.two-section-image-right .content p,
+.two-section-image-left .content p {
+  color: #6C6C6C;
+  font-weight: 500;
+  letter-spacing: .4px;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+.two-section-image-left {
+  background-color: #f9f9f9;
+}
+.two-section-image-left .content {
+  padding: 200px 200px 150px 0px;
+}
+.two-section-image-left .image {
+  background-image: url("/static/images/stock/lake_image_stock.png");
+  background-size: cover;
+}
+.two-section-image-right {
+  background-color: white;
+}
+.two-section-image-right .content {
+  padding: 200px 100px 150px 150px;
+}
+.two-section-image-right .image {
+  background-image: url("/static/images/stock/estate_sale_stock.png");
+  background-size: cover;
+}
+#site-footer {
+  color: white;
   padding: 95px 0;
   background-color: #141414;
+}
+#site-footer span.link-left,
+#site-footer span.link-right {
+  padding: 5px 0 0 0;
+  opacity: .5;
+}
+#site-footer span.title {
+  font-size: 24px;
 }
