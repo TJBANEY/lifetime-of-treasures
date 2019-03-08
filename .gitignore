@@ -4,3 +4,5 @@ package.json
 .idea
 
 db.sqlite3
+
+/static

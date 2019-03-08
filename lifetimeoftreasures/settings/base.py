@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'lifetimeoftreasures.apps.SuitConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +46,8 @@ INSTALLED_APPS = [
     'contacts',
     'page',
     'inventory',
+    'filebrowser',
+    # 'filebrowser_s3',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +65,7 @@ ROOT_URLCONF = 'lifetimeoftreasures.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [''],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,3 +129,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# MEDIA_ROOT = "https://s3.us-east-2.amazonaws.com/lifetimeoftreasures/media/"
+
+
+# ======= FILEBROWSER =======#
+FILEBROWSER_DIRECTORY = ''
+DIRECTORY = ''
