@@ -65,8 +65,8 @@ button {
 }
 
 #navigation-header {
-  color: white; 
-  padding: 30px 0; 
+  color: white;
+  padding: 30px 0;
   background: #091D45;
   margin-bottom: -1px;
 
@@ -244,6 +244,55 @@ button {
 
     &.title {
       font-size: 24px;
+    }
+  }
+}
+
+/******** CATALOG ********/
+#catalog {
+  #filter-toolbar {
+    background: lime;
+    border: 1px solid black;
+    padding: 20px 150px;
+
+    span {
+      color: #192C54;
+      font-family: Butler sans-serif serif;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 34px;
+    }
+
+    .select-container {
+      float: right;
+      position: relative;
+
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 5px 10px 4px 10px;
+  
+        border: 1px solid #EDECEC;
+        border-radius: 2px;
+        background: white;
+        float: right;
+  
+        line-height: 21px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #ACACAC;
+        font-family: sans-serif;
+        width: 250px;
+      }
+
+      .fa-caret-down {
+        color: #CCA43A;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 }

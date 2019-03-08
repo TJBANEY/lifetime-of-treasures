@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
 
 {% block body %}
+ <div id="catalog">
+    <div id="filter-toolbar">
+        <span>Our Catalog</span>
 
+        <div class="select-container">
+            <select>
+                <option value="" disabled selected>Filter by category</option>
+                <option value="furniture">Furniture</option>
+                <option value="furniture">Jewelry</option>
+                <option value="furniture">Art</option>
+                <option value="furniture">Currency</option>
+            </select>
+            <i class="fas fa-caret-down"></i>
+        </div>
+    </div>
+ </div>
 {% endblock %}

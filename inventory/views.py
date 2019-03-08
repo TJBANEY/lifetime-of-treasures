@@ -1,5 +1,7 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 
 def inventory_catalog(request):
-    return HttpResponse("INVENTORY")
+    template = "catalog.html"
+    context = {}
+
+    return render(request, template, context)
