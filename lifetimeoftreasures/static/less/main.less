@@ -291,7 +291,63 @@ button {
         position: absolute;
         right: 10px;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-90%);
+      }
+    }
+  }
+
+  #inventory {
+    padding: 50px 150px;
+    background: peru;
+
+    .gallery-item-container {
+      .gallery-item-card {
+        border: 1px solid #c3c3c3;
+
+        .image {
+          height: 315px;
+          background-size: cover;
+
+          &.one {
+            background-image: url("/static/images/stock/lamp.jpg")
+          }
+
+          &.two {
+            background-image: url("/static/images/stock/chair.jpg")
+          }
+
+          &.three {
+            background-image: url("/static/images/stock/horse.jpg")
+          }
+
+          &.four {
+            background-image: url("/static/images/stock/armoire.jpg")
+          }
+        }
+
+        .info {
+          height: 80px;
+          padding: 20px;
+          background: white;
+
+          .name, .price {
+            display: block;
+          }
+
+          .name {
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: bold;
+            color: #192C54;
+          }
+
+          .price {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21px;
+            color: #CCA43A;
+          }
+        }
       }
     }
   }

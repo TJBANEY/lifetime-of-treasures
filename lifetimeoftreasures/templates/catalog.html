@@ -1,20 +1,62 @@
 {% extends 'base.html' %}
 
 {% block body %}
- <div id="catalog">
-    <div id="filter-toolbar">
-        <span>Our Catalog</span>
+    <div id="catalog">
+        <div id="filter-toolbar">
+            <span>Our Catalog</span>
 
-        <div class="select-container">
-            <select>
-                <option value="" disabled selected>Filter by category</option>
-                <option value="furniture">Furniture</option>
-                <option value="furniture">Jewelry</option>
-                <option value="furniture">Art</option>
-                <option value="furniture">Currency</option>
-            </select>
-            <i class="fas fa-caret-down"></i>
+            <div class="select-container">
+                <label>
+                    <select>
+                        <option value="" disabled selected>Filter by category</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="furniture">Jewelry</option>
+                        <option value="furniture">Art</option>
+                        <option value="furniture">Currency</option>
+                    </select>
+                </label>
+                <i class="fas fa-caret-down"></i>
+            </div>
+        </div>
+        <div id="inventory" class="container-fluid col-xs-12">
+            <div class="row">
+                <div class="col gallery-item-container">
+                    <div class="gallery-item-card">
+                        <div class="image one"></div>
+                        <div class="info">
+                            <span class="name">Fancy Lamp</span>
+                            <span class="price">$99.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col gallery-item-container">
+                    <div class="gallery-item-card">
+                        <div class="image two"></div>
+                        <div class="info">
+                            <span class="name">Red Chair</span>
+                            <span class="price">$99.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col gallery-item-container">
+                    <div class="gallery-item-card">
+                        <div class="image three"></div>
+                        <div class="info">
+                            <span class="name">Ceramic Horse</span>
+                            <span class="price">$99.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col gallery-item-container">
+                    <div class="gallery-item-card">
+                        <div class="image four"></div>
+                        <div class="info">
+                            <span class="name">Antique Armoire</span>
+                            <span class="price">$99.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
- </div>
 {% endblock %}

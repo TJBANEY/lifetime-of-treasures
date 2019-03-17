@@ -6,6 +6,6 @@ def health_check():
     return HttpResponse("Healthy")
 
 def landing_page(request):
-    template = "base.html"
+    template = "landing_page.html"
 
     return render(request, template, {})

@@ -247,5 +247,49 @@ button {
   position: absolute;
   right: 10px;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-90%);
+}
+#catalog #inventory {
+  padding: 50px 150px;
+  background: peru;
+}
+#catalog #inventory .gallery-item-container .gallery-item-card {
+  border: 1px solid #c3c3c3;
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .image {
+  height: 315px;
+  background-size: cover;
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .image.one {
+  background-image: url("/static/images/stock/lamp.jpg");
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .image.two {
+  background-image: url("/static/images/stock/chair.jpg");
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .image.three {
+  background-image: url("/static/images/stock/horse.jpg");
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .image.four {
+  background-image: url("/static/images/stock/armoire.jpg");
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .info {
+  height: 80px;
+  padding: 20px;
+  background: white;
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .info .name,
+#catalog #inventory .gallery-item-container .gallery-item-card .info .price {
+  display: block;
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .info .name {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  color: #192C54;
+}
+#catalog #inventory .gallery-item-container .gallery-item-card .info .price {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #CCA43A;
 }
