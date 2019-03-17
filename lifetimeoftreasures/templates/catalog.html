@@ -20,42 +20,35 @@
         </div>
         <div id="inventory" class="container-fluid col-xs-12">
             <div class="row">
-                <div class="col gallery-item-container">
-                    <div class="gallery-item-card">
-                        <div class="image one"></div>
-                        <div class="info">
-                            <span class="name">Fancy Lamp</span>
-                            <span class="price">$99.00</span>
+                {% for item in inventory %}
+                    <div class="col-3 gallery-item-container">
+                        <div class="gallery-item-card">
+                            <div class="image" style="background-image: url('/{{ item.image }}')"></div>
+                            <div class="info">
+                                <span class="name">{{ item.name }}</span>
+                                <span class="price">${{ item.price }}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col gallery-item-container">
-                    <div class="gallery-item-card">
-                        <div class="image two"></div>
-                        <div class="info">
-                            <span class="name">Red Chair</span>
-                            <span class="price">$99.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col gallery-item-container">
-                    <div class="gallery-item-card">
-                        <div class="image three"></div>
-                        <div class="info">
-                            <span class="name">Ceramic Horse</span>
-                            <span class="price">$99.00</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col gallery-item-container">
-                    <div class="gallery-item-card">
-                        <div class="image four"></div>
-                        <div class="info">
-                            <span class="name">Antique Armoire</span>
-                            <span class="price">$99.00</span>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
+            </div>
+
+            <div class="pagination">
+                <span class="step-links">
+                    {% if contacts.has_previous %}
+                        <a href="?page=1">&laquo; first</a>
+                        <a href="?page={{ inventory.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ inventory.number }} of {{ inventory.paginator.num_pages }}.
+                    </span>
+
+                    {% if inventory.has_next %}
+                        <a href="?page={{ inventory.next_page_number }}">next</a>
+                        <a href="?page={{ inventory.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
             </div>
         </div>
     </div>

@@ -9,3 +9,5 @@ class CategoryAdmin(admin.ModelAdmin):
 @admin.register(InventoryItem)
 class InventoryAdmin(admin.ModelAdmin):
     model = InventoryItem
+
+    list_display = ('name', 'category', 'price', 'created_at')

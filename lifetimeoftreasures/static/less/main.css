@@ -253,24 +253,17 @@ button {
   padding: 50px 150px;
   background: peru;
 }
+#catalog #inventory .gallery-item-container {
+  margin-bottom: 20px;
+}
 #catalog #inventory .gallery-item-container .gallery-item-card {
   border: 1px solid #c3c3c3;
 }
 #catalog #inventory .gallery-item-container .gallery-item-card .image {
   height: 315px;
   background-size: cover;
-}
-#catalog #inventory .gallery-item-container .gallery-item-card .image.one {
-  background-image: url("/static/images/stock/lamp.jpg");
-}
-#catalog #inventory .gallery-item-container .gallery-item-card .image.two {
-  background-image: url("/static/images/stock/chair.jpg");
-}
-#catalog #inventory .gallery-item-container .gallery-item-card .image.three {
-  background-image: url("/static/images/stock/horse.jpg");
-}
-#catalog #inventory .gallery-item-container .gallery-item-card .image.four {
-  background-image: url("/static/images/stock/armoire.jpg");
+  background-position: center;
+  background-color: black;
 }
 #catalog #inventory .gallery-item-container .gallery-item-card .info {
   height: 80px;

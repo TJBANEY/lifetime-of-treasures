@@ -7,6 +7,10 @@ DATABASES['default'] = {
     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 }
 
+MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
+
+print(MEDIA_ROOT)
+
 # DEFAULT_FILE_STORAGE = 'filebrowser_s3.storage.S3MediaStorage'
 #
 # AWS_ACCESS_KEY_ID = 'AKIAIJBXVIFBPRROKEBA'

@@ -132,6 +132,7 @@ STATIC_URL = '/static/'
 
 # MEDIA_ROOT = "https://s3.us-east-2.amazonaws.com/lifetimeoftreasures/media/"
 
+MEDIA_URL = '/media/'
 
 # ======= FILEBROWSER =======#
 FILEBROWSER_DIRECTORY = ''
