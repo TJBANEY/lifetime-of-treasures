@@ -7,5 +7,6 @@ def health_check():
 
 def landing_page(request):
     template = "landing_page.html"
+    request.session.clear()
 
     return render(request, template, {})

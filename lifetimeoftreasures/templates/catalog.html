@@ -5,7 +5,7 @@
         function filterClick(e){
             var select = $('#category-select');
             var category = select.val();
-            var inventory = $('#inventory .row');
+            var inventory = $('#inventory');
 
             $.ajax({
                 method: 'POST',
