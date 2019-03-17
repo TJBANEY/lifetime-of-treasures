@@ -211,7 +211,6 @@ button {
 }
 /******** CATALOG ********/
 #catalog #filter-toolbar {
-  background: lime;
   border: 1px solid black;
   padding: 20px 150px;
 }
@@ -251,7 +250,7 @@ button {
 }
 #catalog #inventory {
   padding: 50px 150px;
-  background: peru;
+  background: #F9F9F9;
 }
 #catalog #inventory .gallery-item-container {
   margin-bottom: 20px;
@@ -285,4 +284,23 @@ button {
   font-weight: 500;
   line-height: 21px;
   color: #CCA43A;
+}
+#catalog #inventory .inventory-pagination {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Futura';
+  text-decoration: none;
+  margin-top: 30px;
+}
+#catalog #inventory .inventory-pagination .prev-arrow {
+  margin-right: 34px;
+}
+#catalog #inventory .inventory-pagination .next-arrow {
+  margin-left: 34px;
+}
+#catalog #inventory .inventory-pagination .page-set a {
+  color: #6C6C6C;
+  padding: 0 14px;
 }

@@ -32,23 +32,24 @@
                     </div>
                 {% endfor %}
             </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="inventory-pagination col-3">
+                    <a class="prev-arrow" href="?page={% if inventory.has_previous %}{{ inventory.previous_page_number }}{% else %}#{% endif %}">
+                        <i class="fal fa-long-arrow-left" style="color: #C6A141"></i>
+                    </a>
 
-            <div class="pagination">
-                <span class="step-links">
-                    {% if contacts.has_previous %}
-                        <a href="?page=1">&laquo; first</a>
-                        <a href="?page={{ inventory.previous_page_number }}">previous</a>
-                    {% endif %}
-
-                    <span class="current">
-                        Page {{ inventory.number }} of {{ inventory.paginator.num_pages }}.
+                    <span class="page-set">
+                        {% for page in page_set %}
+                            <a href="?page={{ page }}">{{ page }}</a>
+                        {% endfor %}
                     </span>
 
-                    {% if inventory.has_next %}
-                        <a href="?page={{ inventory.next_page_number }}">next</a>
-                        <a href="?page={{ inventory.paginator.num_pages }}">last &raquo;</a>
-                    {% endif %}
-                </span>
+                    <a class="next-arrow" href="?page={% if inventory.has_next %}{{ inventory.next_page_number }}{% else %}#{% endif %}">
+                        <i class="fal fa-long-arrow-right" style="color: #C6A141"></i>
+                    </a>
+                </div>
+                <div class="col"></div>
             </div>
         </div>
     </div>

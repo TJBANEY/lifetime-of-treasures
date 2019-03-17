@@ -251,7 +251,6 @@ button {
 /******** CATALOG ********/
 #catalog {
   #filter-toolbar {
-    background: lime;
     border: 1px solid black;
     padding: 20px 150px;
 
@@ -298,11 +297,11 @@ button {
 
   #inventory {
     padding: 50px 150px;
-    background: peru;
+    background: #F9F9F9;
 
     .gallery-item-container {
       margin-bottom: 20px;
-      
+
       .gallery-item-card {
         border: 1px solid #c3c3c3;
 
@@ -335,6 +334,31 @@ button {
             line-height: 21px;
             color: #CCA43A;
           }
+        }
+      }
+    }
+
+    .inventory-pagination {
+      text-align: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      font-family: 'Futura';
+      text-decoration: none;
+      margin-top: 30px;
+
+      .prev-arrow {
+        margin-right: 34px;
+      }
+
+      .next-arrow {
+        margin-left: 34px;
+      }
+
+      .page-set {
+        a {
+          color: #6C6C6C;
+          padding: 0 14px;
         }
       }
     }
