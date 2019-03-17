@@ -1,0 +1,11 @@
+{% for item in inventory %}
+    <div class="col-3 gallery-item-container">
+        <div class="gallery-item-card">
+            <div class="image" style="background-image: url('/{{ item.image }}')"></div>
+            <div class="info">
+                <span class="name">{{ item.name }}</span>
+                <span class="price">${{ item.price }}</span>
+            </div>
+        </div>
+    </div>
+{% endfor %}

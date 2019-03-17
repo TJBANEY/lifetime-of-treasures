@@ -1,5 +1,28 @@
 {% extends 'base.html' %}
 
+{% block extrahead %}
+    <script>
+        function filterClick(e){
+            var select = $('#category-select');
+            var category = select.val();
+            var inventory = $('#inventory .row');
+
+            $.ajax({
+                method: 'POST',
+                url: '/filter-change',
+                data: {'category': category},
+                success: function(response){
+                    var newInventory = response['new_inventory'];
+                    inventory.html(newInventory);
+                },
+                error: function(response){
+                    console.log('ERROR');
+                }
+            })
+        }
+    </script>
+{% endblock %}
+
 {% block body %}
     <div id="catalog">
         <div id="filter-toolbar">
@@ -7,12 +30,11 @@
 
             <div class="select-container">
                 <label>
-                    <select>
+                    <select onchange="filterClick(event)" id="category-select">
                         <option value="" disabled selected>Filter by category</option>
-                        <option value="furniture">Furniture</option>
-                        <option value="furniture">Jewelry</option>
-                        <option value="furniture">Art</option>
-                        <option value="furniture">Currency</option>
+                        {% for category in categories %}
+                            <option value="{{ category.name|lower }}">{{ category.name }}</option>
+                        {% endfor %}
                     </select>
                 </label>
                 <i class="fas fa-caret-down"></i>
