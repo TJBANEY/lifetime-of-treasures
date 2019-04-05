@@ -80,9 +80,6 @@ class DjangoSuitConfig(AppConfig):
     # }
 
     def __init__(self, app_name, app_module):
-        print(app_name)
-        print(app_module)
-
         self.setup_model_admin_defaults()
         super(DjangoSuitConfig, self).__init__(app_name, app_module)
 
