@@ -1,8 +1,15 @@
+# NPM and Node related files/folders
 node_modules/
 package.json
 
-.idea
-
+# Local Dev
 db.sqlite3
 
+# Static Assets
 /static
+
+# Compiled python files in all directories/sub-directories
+*.pyc
+
+# Pycharm configuration settings
+.idea
