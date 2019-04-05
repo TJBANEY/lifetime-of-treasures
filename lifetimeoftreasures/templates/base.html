@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <title>A Lifetime of Treasures</title>
 
-    {% include "ga_tracking/ga.html" %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137814018-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    {# STYLES #}
+      gtag('config', 'UA-137814018-1');
+    </script>
+
+    <!--  STYLES -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/less/main.css">
     <link rel="stylesheet" href="/static/css/tjbfopr.css">
 
-    {# FAVICON #}
+    <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicon/apple-icon-72x72.png">
@@ -31,7 +39,7 @@
     <meta name="theme-color" content="#ffffff">
     
 
-    {# SCRIPTS #}
+    <!-- SCRIPTS -->
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'page',
     'inventory',
     'filebrowser',
-    'ga_tracking',
     # 'filebrowser_s3',
 ]
 
@@ -61,8 +60,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'lifetimeoftreasures.urls'
 
-GA_TRACKING_ID = 'UA-137814018-1'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -74,7 +71,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'ga_tracking.context_processors.ga_tracking_id',
             ],
         },
     },
