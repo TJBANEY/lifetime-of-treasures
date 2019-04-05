@@ -68,7 +68,8 @@ def inventory_catalog(request):
     context = {
         'inventory': inventory,
         'page_set': page_set,
-        'categories': categories
+        'categories': categories,
+        "current_page": "catalog"
     }
 
     return render(request, template, context)

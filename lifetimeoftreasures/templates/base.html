@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>A Lifetime of Treasures</title>
 
+    {% include "ga_tracking/ga.html" %}
+
     {# STYLES #}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/less/main.css">
@@ -42,19 +44,43 @@
     <div class="navigation container">
         <div class="row">
             <span class="link-left col">
-                Home
+                <a href="/">
+                    <span {% if current_page == 'home' %}class="current-page"{% endif %}>
+                        Home
+                    </span>
+                </a>
             </span>
             <span class="link-left col">
-                Catalog
+                <a href="/catalog">
+                    <span {% if current_page == 'catalog' %}class="current-page"{% endif %}>
+                        Catalog
+                    </span>
+                </a>
             </span>
+
             <span class="title col-6 col-lg-5">
-                <span class="first">A LIFETIME</span> <span class="second">of</span> <span class="third">TREASURES</span>
+                <span class="first">
+                    A LIFETIME
+                </span>
+                <span class="second">of</span>
+                <span class="third">
+                    TREASURES
+                </span>
+            </span>
+
+            <span class="link-right col">
+                <a href="/estate-sales">
+                    <span {% if current_page == 'estate-sales' %}class="current-page"{% endif %}>
+                        Estate Sales
+                    </span>
+                </a>
             </span>
             <span class="link-right col">
-                Estate Sales
-            </span>
-            <span class="link-right col">
-                About
+                <a href="/about-us">
+                    <span {% if current_page == 'about' %}class="current-page"{% endif %}>
+                        About
+                    </span>
+                </a>
             </span>
         </div>
     </div>

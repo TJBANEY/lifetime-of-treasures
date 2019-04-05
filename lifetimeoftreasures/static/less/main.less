@@ -24,6 +24,9 @@ button {
 /*****************/
 
 #navigation-header, #site-footer {
+  a {
+    text-decoration: none;
+  }
   .container {
     &.navigation, &.footer {
       @media screen and (min-width: 1200px) {
@@ -47,6 +50,7 @@ button {
       }
 
       &.title {
+        cursor: default;
         letter-spacing: 4px;
         padding: 0;
         text-align: center;
@@ -70,6 +74,10 @@ button {
   background: #091D45;
   margin-bottom: -1px;
 
+  a {
+    color: white;
+  }
+
   @media screen and (min-width: 992px) {
     margin-bottom: 0;
   }
@@ -77,6 +85,23 @@ button {
   span {
     &.link-left, &.link-right {
       padding: 0;
+
+      span {
+        padding: 0 7px 7px 7px;
+        cursor: pointer;
+
+        &.current-page {
+          border-bottom: 3px solid #C6A141;
+        }
+      }
+    }
+
+    &.link-left {
+      margin-left: -7px;
+    }
+
+    &.link-right {
+      margin-right: -7px;
     }
 
     &.title {
