@@ -3,13 +3,14 @@ from lifetimeoftreasures.settings.base import *
 STATIC_ROOT = os.path.join(BASE_DIR, 'lifetimeoftreasures/static/')
 
 DATABASES['default'] = {
-    'ENGINE': 'django.db.backends.sqlite3',
-    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'NAME': 'lifetimeoftreasures',
+    'USER': 'tim',
+    'HOST': 'localhost',
+    'PORT': '5432',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2'
 }
 
 MEDIA_ROOT = os.path.join(BASE_DIR, '../media')
-
-print(MEDIA_ROOT)
 
 # DEFAULT_FILE_STORAGE = 'filebrowser_s3.storage.S3MediaStorage'
 #
