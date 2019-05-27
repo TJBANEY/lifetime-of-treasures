@@ -13,3 +13,7 @@ db.sqlite3
 
 # Pycharm configuration settings
 .idea
+
+**/*.DS_STORE
+
+media/
