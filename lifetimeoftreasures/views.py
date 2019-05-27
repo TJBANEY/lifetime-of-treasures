@@ -18,3 +18,15 @@ def landing_page(request):
     }
 
     return render(request, template, context)
+
+def temp_estate_sales_view(request):
+    template = "temp/estate-sales.html"
+    context = {}
+
+    return render(request, template, context)
+
+def temp_about_us(request):
+    template = "temp/about-us.html"
+    context = {}
+
+    return render(request, template, context)

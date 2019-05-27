@@ -236,7 +236,9 @@ button {
   min-height: 550px;
 }
 .landing-section#hero {
-  background-color: #091D45;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/static/images/stock/antiques_stock.jpg);
+  background-size: cover;
+  background-position: center;
   padding: 130px 150px;
 }
 .landing-section#hero #hero-text-box {
