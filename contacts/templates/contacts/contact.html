@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    <div id="contact-form" class="container-fluid">
+        <div class="row">
+            <div id="lot-form" class="col-7">
+                <form method="post" action="/contact">
+                    <h3>Contact Us</h3>
+                    <div class="row">
+                        <label id="first-name" class="col-6">
+                            <input type="text" name="first-name" placeholder="First Name">
+                        </label>
+                        <label id="last-name" class="col-6">
+                            <input type="text" name="last-name" placeholder="Last Name">
+                        </label>
+                        <label id="email" class="col-12">
+                            <input type="text" name="email" placeholder="Email Address">
+                        </label>
+                        <label id="phone" class="col-6">
+                            <input type="text" name="phone" placeholder="Phone Number">
+                        </label>
+                        <label id="subject" class="col-6">
+                            <select name="subject">
+                                <option value="">Subject</option>
+                                <option value="general-info">General Info</option>
+                                <option value="catalog-item">Catalog Item</option>
+                                <option value="estate-sale">Estate Sale Planning</option>
+                            </select>
+                        </label>
+                        <label id="message" class="col-12">
+                            <textarea name="message" rows="10" placeholder="Message"></textarea>
+                        </label>
+                    </div>
+
+                    <div class="text-center">
+                        <button>
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+
+                <div id="contact-info">
+                    <h3>Desiree Schuman</h3>
+                    <div class="row">
+                        <div class="col-6 address text-left">
+                            <p>
+                                4818 W. Chicago St. <br>
+                                Chandler AZ, 85226
+                            </p>
+                        </div>
+                        <div class="col-6 phone-number text-right">
+                            <p>
+                                479-586-9436
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="lot-form-img" class="col-5"></div>
+        </div>
+    </div>
+{% endblock %}
