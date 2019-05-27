@@ -1,8 +1,10 @@
+// out: ../css/main.css, ../less/main.less
+
 /**** Globals ****/
 button {
   padding: 12px 20px;
   border: none;
-  line-height: 19px;
+  line-height: 20px;
   text-align: center;
   font-size: 16px;
   letter-spacing: .4px;
@@ -23,22 +25,192 @@ button {
 }
 /*****************/
 
+/**** Modals *****/
+.modal {
+  &.fade {
+    .modal-dialog {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &#mod-dia-info {
+        @media screen and (min-width: 576px) {
+          max-width: 870px !important;
+        }
+
+        .modal-content {
+          #product-modal-info {
+            h3 {
+              font-family: Butler, sans-serif;
+              color: #091D45;
+              font-size: 26px;
+              font-weight: bold;
+              letter-spacing: -0.2px;
+              line-height: 31px;
+              margin: 0;
+            }
+
+            .product-modal-price {
+              color: #CCA43A;
+              font-family: Futura, sans-serif;
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 27px;
+              margin-bottom: 10px;
+            }
+
+            .product-modal-description {
+              color: #6C6C6C;
+              font-family: Futura Std, sans-serif;
+              font-size: 14px;
+              font-weight: 300;
+              letter-spacing: 0.4px;
+              line-height: 22px;
+            }
+
+            #product-modal-msg-send {
+              background: #091D45;
+
+              p, h5, button {
+                color: white;
+                font-family: "Futura Std", sans-serif;
+                font-weight: 500;
+              }
+
+              p {
+                font-size: 12px;
+                letter-spacing: 4px;
+                line-height: 14px;
+                text-align: center;
+              }
+
+              button {
+                background: #C6A141;
+                color: white;
+                font-size: 20px;
+                letter-spacing: .4px;
+                line-height: 25px;
+                width: 100%;
+              }
+
+              h5 {
+                font-size: 18px;
+                letter-spacing: 3.55px;
+                line-height: 22px;
+                text-align: center;
+                margin-top: 25px;
+              }
+            }
+          }
+        }
+      }
+
+      &#mod-dia-interest {
+        background: yellow;
+        
+        .modal-content {
+          #product-modal-info {
+            .interest-intro {
+              font-family: Butler, sans-serif;
+              color: #091D45;;
+              font-size: 20px;
+              font-weight: bold;
+              letter-spacing: -0.15px;
+              line-height: 24px;
+              margin: 0 0 20px 0;
+            }
+
+            #product-media-object {
+              margin-bottom: 25px;
+              
+              .row {
+                margin: 0;
+              }
+
+              #product-image {
+                padding: 0;
+                background-image: url('/media/inventory/thomaskinkade.jpg');
+                background-size: cover;
+                background-position: center;
+              }
+
+              #product-details {
+                border: 1px solid #EDECEC;
+                padding: 20px;
+
+                h3 {
+                  margin: 0;
+                  color: #091D45;
+                  font-family: Butler, sans-serif;
+                  font-size: 20px;
+                  font-weight: bold;
+                  letter-spacing: -0.15px;
+                  line-height: 24px;
+                }
+
+                p {
+                  margin: 0;
+                  color: #CCA43A;
+                  font-family: Future, sans-serif;
+                  font-size: 15px;
+                  line-height: 20px;
+                  font-weight: 500;
+                }
+              }
+            }
+            
+            form {
+              button {
+                background: #091D45;
+              }
+              
+              label {
+                margin-bottom: 15px;
+                
+                &#first-name {
+                  padding-right: 10px;
+                }
+                
+                &#last-name {
+                  padding-left: 10px;
+                }
+                
+                input, textarea {
+                  line-height: 19px;
+                  border: 1px solid #E5E3E3;
+                  width: 100%;
+                  padding: 13px 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*****************/
+
 #navigation-header, #site-footer {
   a {
     text-decoration: none;
   }
+
   .container {
     &.navigation, &.footer {
       @media screen and (min-width: 1200px) {
         max-width: 960px !important;
       }
     }
+
     span {
       &.link-left, &.link-right {
         letter-spacing: .4px;
         font-weight: 100;
         font-size: 16px;
-        font-family: "Futura Std" sans-serif serif;
+        font-family: "Futura Std", sans-serif serif;
       }
 
       &.link-left {
@@ -234,7 +406,7 @@ button {
   background-color: #f9f9f9;
 
   .content {
-    padding: 200px 200px 150px 0px;
+    padding: 200px 200px 150px 0;
   }
 
   .image {
@@ -296,12 +468,12 @@ button {
         -moz-appearance: none;
         appearance: none;
         padding: 5px 10px 4px 10px;
-  
+
         border: 1px solid #EDECEC;
         border-radius: 2px;
         background: white;
         float: right;
-  
+
         line-height: 21px;
         font-weight: 500;
         font-size: 16px;
@@ -368,7 +540,7 @@ button {
       font-weight: 500;
       font-size: 16px;
       line-height: 19px;
-      font-family: 'Futura';
+      font-family: 'Futura', sans-serif;
       text-decoration: none;
       margin-top: 30px;
 
@@ -387,5 +559,98 @@ button {
         }
       }
     }
+  }
+}
+
+#contact-form {
+  .col-7 {
+    flex: 0 0 52% !important;
+    max-width: 52% !important;
+  }
+
+  .col-5 {
+    flex: 0 0 48% !important;
+    max-width: 48% !important;
+  }
+
+  #lot-form {
+    background: #F9F9F9;
+    padding: 60px 0 100px 130px;
+
+    form {
+      background-color: white;
+      padding: 30px;
+      margin-bottom: 20px;
+
+      button {
+        background: #CCA43A;
+        padding: 10px 20px;
+        color: white;
+      }
+
+      label {
+        margin-bottom: 15px;
+
+        &#first-name, &#phone {
+          padding-right: 10px !important;
+        }
+
+        &#last-name, &#subject {
+          padding-left: 10px !important;
+        }
+
+        input, select, textarea {
+          width: 100%;
+        }
+
+        ::placeholder {
+          color: rgba(108, 108, 108, 0.6);
+        }
+
+        input, textarea, select {
+          padding: 10px 15px;
+          border: 1px solid #F3F2F2;
+        }
+
+        select {
+          padding: 12px 15px;
+          border: 1px solid #F3F2F2;
+          background: white;
+        }
+      }
+    }
+
+    #contact-info {
+      background: white;
+      padding: 30px;
+
+      .address {
+        p {
+          margin: 0;
+          letter-spacing: .36px;
+          font-size: 16px;
+          color: #6C6C6C;
+          font-weight: 500;
+          line-height: 26px;
+        }
+      }
+
+      .phone-number {
+        p {
+          margin: 0;
+          line-height: 35px;
+          letter-spacing: -.15px;
+          color: #091D45;
+          font-weight: bold;
+          font-size: 29px;
+        }
+      }
+    }
+  }
+
+  #lot-form-img {
+    background-image: url('/static/images/section_images/contact-form-image.png');
+    padding: 60px 0 100px 130px;
+    background-size: 100% 100%;
   }
 }
