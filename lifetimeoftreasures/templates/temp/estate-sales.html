@@ -1,5 +1,101 @@
 {% extends 'base.html' %}
 
 {% block body %}
+    <div class="two-section-image-right estate-sale-overflow col-12">
+        <div class="row">
+            <div class="col-6 content">
+                <h3>Estate Sale Planning</h3>
+                <p>
+                    Aenean lacinia bibendum nulla sed consectetur.
+                    Sed posuere consectetur est at lobortis. Maecenas
+                    sed diam eget risus varius blandit sit amet non
+                    magna. Donec sed odio dui.
+                </p>
+                <a href="/contact">
+                    <button class="gold">Contact Us</button>
+                </a>
+            </div>
+            <div class="col-6 floating-image-container">
+                <img src="/static/images/stock/estate_sale_stock.png" alt="">
+            </div>
+        </div>
+    </div>
 
+    <div id="estate-sale-planning-service">
+        <h1 class="text-center" style="margin-bottom: 65px;">
+            What Estate Sale Planning Includes
+        </h1>
+        <div id="services">
+            <div class="row">
+                <div class="service col-4">
+                    <p class="title">Quam Cras Condimentum</p>
+                    <p class="description">
+                        Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est
+                        at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                        magna. Donec sed odio dui.</p>
+                </div>
+                <div class="service col-4">
+                    <p class="title">Quam Cras Condimentum</p>
+                    <p class="description">
+                        Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est
+                        at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                        magna. Donec sed odio dui.</p>
+                </div>
+                <div class="service col-4">
+                    <p class="title">Quam Cras Condimentum</p>
+                    <p class="description">
+                        Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est
+                        at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                        magna. Donec sed odio dui.</p>
+                </div>
+                <div class="service col-4">
+                    <p class="title">Quam Cras Condimentum</p>
+                    <p class="description">
+                        Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est
+                        at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                        magna. Donec sed odio dui.</p>
+                </div>
+                <div class="service col-4">
+                    <p class="title">Quam Cras Condimentum</p>
+                    <p class="description">
+                        Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est
+                        at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                        magna. Donec sed odio dui.</p>
+                </div>
+                <div class="service col-4">
+                    <p class="title">Quam Cras Condimentum</p>
+                    <p class="description">
+                        Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est
+                        at lobortis. Maecenas sed diam eget risus varius blandit sit amet non
+                        magna. Donec sed odio dui.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button class="gold">Contact Us</button>
+        </div>
+    </div>
+
+    <div class="two-section-image-left estate-sales-smaller-project col-12">
+        <div class="row">
+            <div class="col-6 image"></div>
+            <div class="col-6 content">
+                <h3>Have a Smaller Project?</h3>
+                <p class="p-title">OTHER SERVICES WE OFFER</p>
+                <p class="p-text">
+                    Praesent commodo cursus magna
+                    Vel scelerisque nisl consectetur et
+                    Nullam quis risus eget urna
+                    Mollis ornare vel eu leo
+                    Curabitur blandit tempus porttitor
+                </p>
+                <a href="/contact">
+                    <button class="gold">Contact Us</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {% include 'snippets/contact-form.html' %}
 {% endblock %}

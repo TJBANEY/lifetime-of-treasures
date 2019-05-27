@@ -1,0 +1,102 @@
+<div id="contact-form" class="container-fluid">
+    <div class="row">
+        <div id="lot-form" class="col-7">
+
+            <div class="success-message {% if not messages %}hidden{% else %}visible{% endif %}">
+                {% for message in messages %}
+                    <i id="close-success-message" class="fal fa-times"></i>
+                    <span>{{ message }}</span>
+                {% endfor %}
+            </div>
+
+            <form method="post" action="/contact/">
+                {% csrf_token %}
+                <h3>Contact Us</h3>
+                <div class="row">
+                    {% if form.errors.first_name or form.errors.last_name %}
+                        <div class="col-12">
+                            <span class="error-msg">*Please provide your first and last name.</span>
+                        </div>
+                    {% endif %}
+                    <label id="first-name" class="col-6">
+                        <input class="{% if form.errors.first_name %}error{% endif %}"
+                               type="text"
+                               name="first_name"
+                               value="{% if form.first_name.value %}{{ form.first_name.value }}{% endif %}"
+                               placeholder="First Name">
+                    </label>
+                    <label id="last-name" class="col-6">
+                        <input class="{% if form.errors.last_name %}error{% endif %}"
+                               type="text"
+                               name="last_name"
+                               value="{% if form.last_name.value %}{{ form.last_name.value }}{% endif %}"
+                               placeholder="Last Name">
+                    </label>
+                    <label id="email" class="col-12">
+                        {% if form.errors.email %}
+                            <span class="error-msg">*Please provide an email we can reach you at.</span>
+                        {% endif %}
+                        <input class="{% if form.errors.email %}error{% endif %}" type="text"
+                               name="email"
+                               value="{% if form.email.value %}{{ form.email.value }}{% endif %}"
+                               placeholder="Email Address">
+                    </label>
+                    {% if form.errors.phone %}
+                        <div class="col-12">
+                            <span class="error-msg">*Please provide a number we can reach you at.</span>
+                        </div>
+                    {% endif %}
+                    <label id="phone" class="col-6">
+                        <input class="{% if form.errors.phone %}error{% endif %}"
+                               type="text"
+                               name="phone"
+                               value="{% if form.phone.value %}{{ form.phone.value }}{% endif %}"
+                               placeholder="Phone Number">
+                    </label>
+                    <label id="subject" class="col-6">
+                        <select name="subject">
+                            <option value="general-info">Subject</option>
+                            <option value="general-info">General Info</option>
+                            <option value="catalog-item">Catalog Item</option>
+                            <option value="estate-sale">Estate Sale Planning</option>
+                        </select>
+                    </label>
+                    <label id="message" class="col-12">
+                        {% if form.errors.inquiry %}
+                            <span class="error-msg">*Please provide a message.</span>
+                        {% endif %}
+                        <textarea class="{% if form.errors.inquiry %}error{% endif %}"
+                                  name="inquiry"
+                                  rows="6"
+                                  placeholder="Message">{% if form.inquiry.value %}
+                            {{ form.inquiry.value }}{% endif %}</textarea>
+                    </label>
+                </div>
+
+                <div class="text-center">
+                    <button>
+                        Send Message
+                    </button>
+                </div>
+            </form>
+
+            <div id="contact-info">
+                <h3>Desiree Schuman</h3>
+                <div class="row">
+                    <div class="col-6 address text-left">
+                        <p>
+                            4818 W. Chicago St. <br>
+                            Chandler AZ, 85226
+                        </p>
+                    </div>
+                    <div class="col-6 phone-number text-right">
+                        <p>
+                            479-586-9436
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="lot-form-img" class="col-5"></div>
+    </div>
+</div>

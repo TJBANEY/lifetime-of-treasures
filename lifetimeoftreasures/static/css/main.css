@@ -152,6 +152,36 @@ button {
   padding: 13px 12px;
 }
 /*****************/
+/****** ESTATE SALES ******/
+#estate-sale-planning-service {
+  background: #F9F9F9;
+  padding: 180px 160px 110px 160px;
+}
+#estate-sale-planning-service h1 {
+  font-size: 34px;
+  color: #C6A141;
+  font-weight: 500;
+  line-height: 41px;
+}
+#estate-sale-planning-service #services {
+  margin-bottom: 40px;
+}
+#estate-sale-planning-service #services .service .title {
+  font-family: "Butler", sans-serif;
+  color: #091D45;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+}
+#estate-sale-planning-service #services .service .description {
+  color: #6C6C6C;
+  font-family: "Futura Std", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.31px;
+  line-height: 24px;
+}
+/**************************/
 #navigation-header a,
 #site-footer a {
   text-decoration: none;
@@ -214,6 +244,12 @@ button {
 #navigation-header span.link-right {
   padding: 0;
 }
+@media screen and (max-width: 991px) {
+  #navigation-header span.link-left,
+  #navigation-header span.link-right {
+    font-size: 14px !important;
+  }
+}
 #navigation-header span.link-left span,
 #navigation-header span.link-right span {
   padding: 0 7px 7px 7px;
@@ -232,26 +268,40 @@ button {
 #navigation-header span.title {
   font-size: 18px;
 }
+#home-hero {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/static/images/stock/antiques_stock.jpg);
+  background-attachment: fixed;
+}
+#about-us-hero {
+  position: relative;
+  background-image: url("/static/images/stock/canyon.png");
+  background-attachment: fixed;
+}
+#about-us-hero #az-png {
+  position: absolute;
+  top: 90px;
+  right: 250px;
+}
 .landing-section {
   min-height: 550px;
 }
-.landing-section#hero {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/static/images/stock/antiques_stock.jpg);
+.landing-section.hero {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 130px 150px;
 }
-.landing-section#hero #hero-text-box {
+.landing-section.hero #hero-text-box {
   width: 560px;
   min-height: 150px;
   color: white;
 }
-.landing-section#hero #hero-text-box h3 {
+.landing-section.hero #hero-text-box h3 {
   font-weight: 500;
   font-size: 34px;
   line-height: 41px;
 }
-.landing-section#hero #hero-text-box p {
+.landing-section.hero #hero-text-box p {
   margin: 0;
   line-height: 32px;
   font-size: 18px;
@@ -340,7 +390,59 @@ button {
 .two-section-image-left .content {
   padding: 200px 200px 150px 0;
 }
-.two-section-image-left .image {
+.two-section-image-left.estate-sales-smaller-project .image {
+  background-image: url("/static/images/stock/smaller_projects.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.two-section-image-left.estate-sales-smaller-project .content {
+  background-color: white;
+  padding: 100px;
+}
+.two-section-image-left.estate-sales-smaller-project .content h3 {
+  color: #091D45;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 41px;
+  font-family: Butler, sans-serif;
+  margin-bottom: 45px;
+}
+.two-section-image-left.estate-sales-smaller-project .content .p-title {
+  color: #C6A141;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.7px;
+  line-height: 21px;
+  font-family: Futura, sans-serif;
+  margin-bottom: 10px;
+}
+.two-section-image-left.estate-sales-smaller-project .content .p-text {
+  margin-bottom: 50px;
+  padding-right: 460px;
+}
+.two-section-image-left.about-us-who-we-are .image {
+  background-image: url("/static/images/stock/lake_stock_png.png");
+  background-size: 75%;
+  background-position-x: center;
+  background-position-y: 70%;
+  background-repeat: no-repeat;
+}
+.two-section-image-left.about-us-who-we-are .content {
+  padding: 180px 150px 180px 60px;
+}
+.two-section-image-left.about-us-our-vision .image {
+  background-image: url("/static/images/stock/our_vision.png");
+}
+.two-section-image-left.about-us-our-vision .content {
+  padding: 160px 80px 150px 100px;
+}
+.two-section-image-left.about-us-our-values .image {
+  background-image: url("/static/images/stock/our_values.jpg");
+}
+.two-section-image-left.about-us-our-values .content {
+  padding: 150px 100px 150px 100px;
+}
+.two-section-image-left.landing .image {
   background-image: url("/static/images/stock/lake_image_stock.png");
   background-size: cover;
 }
@@ -353,6 +455,19 @@ button {
 .two-section-image-right .image {
   background-image: url("/static/images/stock/estate_sale_stock.png");
   background-size: cover;
+}
+.two-section-image-right.estate-sale-overflow img {
+  height: 530px;
+  width: 560px;
+  z-index: 1;
+  position: absolute;
+  top: 80px;
+}
+.two-section-image-right.estate-sale-overflow .content {
+  padding: 150px 70px 170px 150px;
+}
+.two-section-image-right.estate-sale-overflow .content h3 {
+  color: #091D45;
 }
 #site-footer {
   color: white;
@@ -471,13 +586,39 @@ button {
   max-width: 48% !important;
 }
 #contact-form #lot-form {
-  background: #F9F9F9;
+  background: linear-gradient(#F9F9F9, #efefef);
   padding: 60px 0 100px 130px;
+}
+#contact-form #lot-form .success-message {
+  position: relative;
+}
+#contact-form #lot-form .success-message #close-success-message {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  color: white;
+  font-weight: 500;
+}
+#contact-form #lot-form .success-message.hidden {
+  opacity: 0;
+}
+#contact-form #lot-form .success-message.visible {
+  opacity: 1;
+  padding: 15px 20px;
+  color: white;
+  background: #37cc5a;
+  border: 2px solid #2eb74e;
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 #contact-form #lot-form form {
   background-color: white;
   padding: 30px;
   margin-bottom: 20px;
+}
+#contact-form #lot-form form span.error-msg {
+  font-size: 12px;
+  color: #dc3545;
 }
 #contact-form #lot-form form button {
   background: #CCA43A;
@@ -499,6 +640,12 @@ button {
 #contact-form #lot-form form label select,
 #contact-form #lot-form form label textarea {
   width: 100%;
+  border-radius: 4px;
+}
+#contact-form #lot-form form label input.error,
+#contact-form #lot-form form label select.error,
+#contact-form #lot-form form label textarea.error {
+  border: 1px solid #dc3545;
 }
 #contact-form #lot-form form label ::placeholder {
   color: rgba(108, 108, 108, 0.6);
@@ -535,7 +682,7 @@ button {
   font-size: 29px;
 }
 #contact-form #lot-form-img {
-  background-image: url('/static/images/section_images/contact-form-image.png');
+  background-image: url('/static/images/stock/contact_stock.png');
   padding: 60px 0 100px 130px;
   background-size: 100% 100%;
 }

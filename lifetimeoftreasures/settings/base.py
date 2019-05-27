@@ -128,3 +128,5 @@ MEDIA_URL = '/media/'
 # ======= FILEBROWSER =======#
 FILEBROWSER_DIRECTORY = ''
 DIRECTORY = ''
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'

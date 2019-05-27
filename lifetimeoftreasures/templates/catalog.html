@@ -151,13 +151,15 @@
                     </div>
 
                     <form method="post" action="contact/">
+                        {% csrf_token %}
+
                         <div class="row">
-                            <input type="hidden" name="subject" value="product-info">
+                            <input type="hidden" name="subject" value="catalog-item">
                             <label id="first-name" class="col-6">
-                                <input type="text" name="first-name" placeholder="First Name">
+                                <input type="text" name="first_name" placeholder="First Name">
                             </label>
                             <label id="last-name" class="col-6">
-                                <input type="text" name="last-name" placeholder="Last Name">
+                                <input type="text" name="last_name" placeholder="Last Name">
                             </label>
                             <label id="email" class="col-12">
                                 <input type="text" name="email" placeholder="Email Address">
@@ -166,8 +168,8 @@
                                 <input type="text" name="phone" placeholder="Phone Number">
                             </label>
                             <label id="message" class="col-12">
-                                <textarea name="message" rows="4"
-                                          placeholder="Message"></textarea>
+                                <textarea name="inquiry" rows="4" placeholder="Message">
+                                </textarea>
                             </label>
                         </div>
 
