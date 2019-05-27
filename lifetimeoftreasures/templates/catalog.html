@@ -43,9 +43,11 @@
         <div id="inventory" class="container-fluid col-xs-12">
             <div class="row">
                 {% for item in inventory %}
-                    <div class="col-3 gallery-item-container">
+                    <div class="col-3 gallery-item-container" data-toggle="modal"
+                         data-target="#product-info-modal">
                         <div class="gallery-item-card">
-                            <div class="image" style="background-image: url('/{{ item.image }}')"></div>
+                            <div class="image"
+                                 style="background-image: url('/media/{{ item.image }}')"></div>
                             <div class="info">
                                 <span class="name">{{ item.name }}</span>
                                 <span class="price">${{ item.price }}</span>
@@ -57,7 +59,15 @@
             <div class="row">
                 <div class="col"></div>
                 <div class="inventory-pagination col-3">
-                    <a class="prev-arrow" href="?page={% if inventory.has_previous %}{{ inventory.previous_page_number }}{% else %}#{% endif %}">
+                    <a class="prev-arrow" href="?page=
+
+
+
+
+
+
+
+                            {% if inventory.has_previous %}{{ inventory.previous_page_number }}{% else %}#{% endif %}">
                         <i class="fal fa-long-arrow-left" style="color: #C6A141"></i>
                     </a>
 
@@ -67,11 +77,107 @@
                         {% endfor %}
                     </span>
 
-                    <a class="next-arrow" href="?page={% if inventory.has_next %}{{ inventory.next_page_number }}{% else %}#{% endif %}">
+                    <a class="next-arrow" href="?page=
+
+
+
+
+
+
+
+                            {% if inventory.has_next %}{{ inventory.next_page_number }}{% else %}#{% endif %}">
                         <i class="fal fa-long-arrow-right" style="color: #C6A141"></i>
                     </a>
                 </div>
                 <div class="col"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Info Modal -->
+    <div class="modal fade" id="product-info-modal">
+        <div class="modal-dialog" id="mod-dia-info">
+            <div class="modal-content">
+                <div class="row">
+                    <div id="product-modal-image" class="col-5"
+                         style="background-image: url('/media/inventory/thomaskinkade.jpg'); background-size: cover; background-position: center; height: inherit;">
+                    </div>
+
+                    <div id="product-modal-info" class="col-7" style="padding: 40px 30px;">
+                        <i data-dismiss="modal" class="fal fa-times" style="position: absolute; right: 30px; top: 15px; color: #C6A141;"></i>
+                        <h3>Product Title</h3>
+                        <p class="product-modal-price">$9.99</p>
+                        <p class="product-modal-description" style="margin-bottom: 60px;">
+                            Cras mattis consectetur purus sit amet fermentum. Curabitur blandit
+                            tempus
+                            porttitor. Cras mattis consectetur purus sit amet mentum. Morbi leo
+                            risus,
+                            porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur
+                            purus
+                            sit amet fermentum.
+                        </p>
+
+                        <div id="product-modal-msg-send" style="padding: 20px 80px;">
+                            <p>INTERESTED IN THIS?</p>
+                            <button data-dismiss="modal" data-toggle="modal"
+                                    data-target="#product-interest-modal">
+                                Send us a Message
+                            </button>
+                            <h5>OR CALL 479-202-1250</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Interest Modal -->
+    <div class="modal fade" id="product-interest-modal">
+        <div class="modal-dialog" id="mod-dia-interest">
+            <div class="modal-content">
+                <div id="product-modal-info" style="padding: 40px 30px;">
+                    <i data-dismiss="modal" class="fal fa-times" style="position: absolute; right: 30px; top: 15px; color: #C6A141;"></i>
+
+                    <h3 class="interest-intro">Send us a message about</h3>
+
+                    <div id="product-media-object">
+                        <div class="row">
+                            <div id="product-image" class="col-2"></div>
+                            <div id="product-details" class="col-10">
+                                <h3>Product Name</h3>
+                                <p>$99.00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form method="post" action="contact/">
+                        <div class="row">
+                            <input type="hidden" name="subject" value="product-info">
+                            <label id="first-name" class="col-6">
+                                <input type="text" name="first-name" placeholder="First Name">
+                            </label>
+                            <label id="last-name" class="col-6">
+                                <input type="text" name="last-name" placeholder="Last Name">
+                            </label>
+                            <label id="email" class="col-12">
+                                <input type="text" name="email" placeholder="Email Address">
+                            </label>
+                            <label id="phone-number" class="col-12">
+                                <input type="text" name="phone" placeholder="Phone Number">
+                            </label>
+                            <label id="message" class="col-12">
+                                <textarea name="message" rows="4"
+                                          placeholder="Message"></textarea>
+                            </label>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
