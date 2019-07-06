@@ -1,0 +1,21 @@
+<div id="product-modal-image" class="col-6"
+     style="background-image: url('/media/{{ inventory_item.image }}'); background-size: cover; background-position: center; height: inherit;">
+</div>
+
+<div id="product-modal-info" class="col-6" style="padding: 40px 30px;">
+    <i data-dismiss="modal" class="fal fa-times"
+       style="position: absolute; right: 30px; top: 15px; color: #C6A141;"></i>
+    <h3>{{ inventory_item.name }}</h3>
+    <p class="product-modal-price">${{ inventory_item.price }}</p>
+    <p class="product-modal-description" style="margin-bottom: 60px;">
+        {{ inventory_item.description }}
+    </p>
+
+    <div id="product-modal-msg-send" style="padding: 20px 80px;">
+        <p>INTERESTED IN THIS ITEM?</p>
+        <button data-dismiss="modal" data-toggle="modal" data-target="#product-interest-modal">
+            Send us a Message
+        </button>
+        <h5>OR CALL 479-202-1250</h5>
+    </div>
+</div>

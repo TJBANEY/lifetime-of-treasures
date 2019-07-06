@@ -2,7 +2,7 @@
     {% for item in inventory %}
         <div class="col-3 gallery-item-container">
             <div class="gallery-item-card">
-                <div class="image" style="background-image: url('/{{ item.image }}')"></div>
+                <div class="image" style="background-image: url('/media/{{ item.image }}')"></div>
                 <div class="info">
                     <span class="name">{{ item.name }}</span>
                     <span class="price">${{ item.price }}</span>
@@ -14,8 +14,7 @@
 <div class="row">
     <div class="col"></div>
     <div class="inventory-pagination col-3">
-        <a class="prev-arrow"
-           href="?page={% if inventory.has_previous %}{{ inventory.previous_page_number }}{% else %}#{% endif %}">
+        <a class="prev-arrow" {% if inventory.has_previous %}href="?page={{ inventory.previous_page_number }}{% endif %}">
             <i class="fal fa-long-arrow-left" style="color: #C6A141"></i>
         </a>
 
@@ -25,8 +24,7 @@
                         {% endfor %}
                     </span>
 
-        <a class="next-arrow"
-           href="?page={% if inventory.has_next %}{{ inventory.next_page_number }}{% else %}#{% endif %}">
+        <a class="next-arrow" {% if inventory.has_next %}href="?page={{ inventory.next_page_number }}{% endif %}">
             <i class="fal fa-long-arrow-right" style="color: #C6A141"></i>
         </a>
     </div>
