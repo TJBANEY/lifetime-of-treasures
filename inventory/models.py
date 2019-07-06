@@ -20,7 +20,7 @@ class InventoryItem(models.Model):
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
-    description = models.TextField(max_length=100000, default="")
+    description = models.TextField(max_length=700, default="")
     image = FileBrowseField(max_length=300, directory="media/inventory/", blank=True, null=True)
 
     created_at = models.DateTimeField(auto_now_add=True)
