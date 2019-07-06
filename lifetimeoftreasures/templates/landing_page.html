@@ -3,12 +3,12 @@
 {% block body %}
     <div id="home-hero" class="hero landing-section home col-xs-12">
         <div id="hero-text-box">
-            <h3>What this site is</h3>
+            <h3>Passionate Estate Sale Planning</h3>
             <p class="text-left">
-                Aenean lacinia bibendum nulla sed consectetur.
-                Sed posuere consectetur est at lobortis. Maecenas
-                sed diam eget risus varius blandit sit amet non
-                magna. Donec sed odio dui.
+                Estate sales have been a huge part of our lives, and together we have decades of
+                experience. We have a rich and diverse collection of antiques, art, furniture
+                and more, or if you desire assistance setting up an estate sale, we would be happy
+                to help!
             </p>
             <a href="/catalog">
                 <button class="gold">
@@ -20,44 +20,19 @@
 
     <div id="gallery" class="container-fluid landing-section col-xs-12">
         <div class="row">
-            <h4>Our Catalog</h4>
+            <h4>Featured Pieces from our Catalog</h4>
 
-            <div class="col gallery-item-container">
-                <div class="gallery-item-card">
-                    <div class="image one"></div>
-                    <div class="info">
-                        <span class="name">Fancy Lamp</span>
-                        <span class="price">$99.00</span>
+            {% for item in inventory_preview %}
+                <div class="col gallery-item-container">
+                    <div class="gallery-item-card">
+                        <div class="image" style="background-position: center; border-bottom: 1px solid #d6d6d6; background-image: url('media/{{ item.image }}')"></div>
+                        <div class="info">
+                            <span class="name">{{ item.name }}</span>
+                            <span class="price">${{ item.price }}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col gallery-item-container">
-                <div class="gallery-item-card">
-                    <div class="image two"></div>
-                    <div class="info">
-                        <span class="name">Red Chair</span>
-                        <span class="price">$99.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col gallery-item-container">
-                <div class="gallery-item-card">
-                    <div class="image three"></div>
-                    <div class="info">
-                        <span class="name">Ceramic Horse</span>
-                        <span class="price">$99.00</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col gallery-item-container">
-                <div class="gallery-item-card">
-                    <div class="image four"></div>
-                    <div class="info">
-                        <span class="name">Antique Armoire</span>
-                        <span class="price">$99.00</span>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
 
             <div class="col-12 mgn-top-forty text-center">
                 <a href="/catalog">
@@ -72,10 +47,15 @@
             <div class="col-6 content">
                 <h3>Estate Sale Planning</h3>
                 <p>
-                    Aenean lacinia bibendum nulla sed consectetur.
-                    Sed posuere consectetur est at lobortis. Maecenas
-                    sed diam eget risus varius blandit sit amet non
-                    magna. Donec sed odio dui.
+                    Sometimes in life we have to let go of some of our most
+                    prized possessions. We know this can
+                    be difficult on top of the tedious process of
+                    setting up an estate sale. At <i>A Lifetime of Treasures</i>,
+                    we take that stress off your back, planning, organizing,
+                    and managing the entire process. From cataloging all of
+                    the items that you are parting ways with, to advertising the
+                    sale, all the way to managing the sale while it's happening,
+                    we take care of it all.
                 </p>
                 <a href="/estate-sales">
                     <button class="blue">Learn More</button>
@@ -91,10 +71,11 @@
             <div class="col-6 content">
                 <h3>Who We Are</h3>
                 <p>
-                    Aenean lacinia bibendum nulla sed consectetur.
-                    Sed posuere consectetur est at lobortis. Maecenas
-                    sed diam eget risus varius blandit sit amet non
-                    magna. Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.
+                    We are two friends from Billings Montana who have known each other since we
+                    were young adults, and share the same passion for antiquities and estate sales.
+                    Together, we started <i>A Lifetime of Treasures</i>, because we cherish family
+                    values and understand the importance of priceless treasures such as heirlooms,
+                    and understand how difficult it is to part with them.
                 </p>
                 <a href="/contact">
                     <button class="blue">Contact Us</button>
