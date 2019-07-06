@@ -18,6 +18,6 @@ db.sqlite3
 
 media/
 
-.DS_Store
+*.DS_Store
 
 lifetimeoftreasures/static
