@@ -40,6 +40,10 @@ button {
         }
 
         .modal-content {
+          #product-modal-target {
+            min-width: 900px;
+          }
+          
           #product-modal-info {
             h3 {
               font-family: Butler, sans-serif;
@@ -74,7 +78,7 @@ button {
 
               p, h5, button {
                 color: white;
-                font-family: "Futura Std", sans-serif;
+                font-family: Futura Std, sans-serif;
                 font-weight: 500;
               }
 
@@ -209,7 +213,7 @@ button {
     
     .service {
       .title {
-        font-family: "Butler", sans-serif;
+        font-family: Butler, sans-serif;
         color: #091D45;
         font-size: 20px;
         font-weight: 500;
@@ -217,7 +221,7 @@ button {
       }
       .description {
         color: #6C6C6C;
-        font-family: "Futura Std", sans-serif;
+        font-family: Futura Std, sans-serif;
         font-weight: 500;
         font-size: 14px;
         letter-spacing: 0.31px;
@@ -245,7 +249,7 @@ button {
         letter-spacing: .4px;
         font-weight: 100;
         font-size: 16px;
-        font-family: "Futura Std", sans-serif serif;
+        font-family: Futura Std, sans-serif, serif;
       }
 
       &.link-left {
@@ -505,7 +509,7 @@ button {
   
   &.about-us-who-we-are {
     .image {
-      background-image: url("/static/images/stock/lake_stock_png.png");
+      background-image: url("/static/images/stock/kayak.png");
       background-size: 75%;
       background-position-x: center;
       background-position-y: 70%;
@@ -587,6 +591,14 @@ button {
     &.title {
       font-size: 24px;
     }
+    
+    &.link-left:hover {
+      opacity: 1;
+    }
+    
+    &.link-right:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -598,7 +610,7 @@ button {
 
     span {
       color: #192C54;
-      font-family: Butler sans-serif serif;
+      font-family: Butler, sans-serif, serif;
       font-size: 28px;
       font-weight: 500;
       line-height: 34px;
@@ -685,7 +697,7 @@ button {
       font-weight: 500;
       font-size: 16px;
       line-height: 19px;
-      font-family: 'Futura', sans-serif;
+      font-family: Futura, sans-serif;
       text-decoration: none;
       margin-top: 30px;
 
@@ -796,7 +808,7 @@ button {
         }
 
         select {
-          padding: 12px 15px;
+          height: 100%;
           border: 1px solid #F3F2F2;
           background: white;
         }
@@ -821,11 +833,11 @@ button {
       .phone-number {
         p {
           margin: 0;
-          line-height: 35px;
+          line-height: 24px;
           letter-spacing: -.15px;
           color: #091D45;
           font-weight: bold;
-          font-size: 29px;
+          font-size: 14px;
         }
       }
     }

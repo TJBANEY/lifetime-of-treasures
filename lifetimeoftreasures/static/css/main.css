@@ -31,6 +31,9 @@ button {
     max-width: 870px !important;
   }
 }
+.modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-target {
+  min-width: 900px;
+}
 .modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info h3 {
   font-family: Butler, sans-serif;
   color: #091D45;
@@ -63,7 +66,7 @@ button {
 .modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info #product-modal-msg-send h5,
 .modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info #product-modal-msg-send button {
   color: white;
-  font-family: "Futura Std", sans-serif;
+  font-family: Futura Std, sans-serif;
   font-weight: 500;
 }
 .modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info #product-modal-msg-send p {
@@ -167,7 +170,7 @@ button {
   margin-bottom: 40px;
 }
 #estate-sale-planning-service #services .service .title {
-  font-family: "Butler", sans-serif;
+  font-family: Butler, sans-serif;
   color: #091D45;
   font-size: 20px;
   font-weight: 500;
@@ -175,7 +178,7 @@ button {
 }
 #estate-sale-planning-service #services .service .description {
   color: #6C6C6C;
-  font-family: "Futura Std", sans-serif;
+  font-family: Futura Std, sans-serif;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.31px;
@@ -201,7 +204,7 @@ button {
   letter-spacing: .4px;
   font-weight: 100;
   font-size: 16px;
-  font-family: "Futura Std", sans-serif serif;
+  font-family: Futura Std, sans-serif, serif;
 }
 #navigation-header .container span.link-left,
 #site-footer .container span.link-left {
@@ -421,7 +424,7 @@ button {
   padding-right: 460px;
 }
 .two-section-image-left.about-us-who-we-are .image {
-  background-image: url("/static/images/stock/lake_stock_png.png");
+  background-image: url("/static/images/stock/kayak.png");
   background-size: 75%;
   background-position-x: center;
   background-position-y: 70%;
@@ -482,6 +485,12 @@ button {
 #site-footer span.title {
   font-size: 24px;
 }
+#site-footer span.link-left:hover {
+  opacity: 1;
+}
+#site-footer span.link-right:hover {
+  opacity: 1;
+}
 /******** CATALOG ********/
 #catalog #filter-toolbar {
   border: 1px solid black;
@@ -489,7 +498,7 @@ button {
 }
 #catalog #filter-toolbar span {
   color: #192C54;
-  font-family: Butler sans-serif serif;
+  font-family: Butler, sans-serif, serif;
   font-size: 28px;
   font-weight: 500;
   line-height: 34px;
@@ -563,7 +572,7 @@ button {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  font-family: 'Futura', sans-serif;
+  font-family: Futura, sans-serif;
   text-decoration: none;
   margin-top: 30px;
 }
@@ -657,7 +666,7 @@ button {
   border: 1px solid #F3F2F2;
 }
 #contact-form #lot-form form label select {
-  padding: 12px 15px;
+  height: 100%;
   border: 1px solid #F3F2F2;
   background: white;
 }
@@ -675,11 +684,11 @@ button {
 }
 #contact-form #lot-form #contact-info .phone-number p {
   margin: 0;
-  line-height: 35px;
+  line-height: 24px;
   letter-spacing: -0.15px;
   color: #091D45;
   font-weight: bold;
-  font-size: 29px;
+  font-size: 14px;
 }
 #contact-form #lot-form-img {
   background-image: url('/static/images/stock/contact_stock.png');
