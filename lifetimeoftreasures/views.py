@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
+from inventory.models import InventoryItem
+
+
 def health_check():
     print("Healthy")
     return HttpResponse("Healthy")
@@ -12,9 +15,13 @@ def clear_sort_keys_from_filter(request):
 
 def landing_page(request):
     template = "landing_page.html"
+
+    inventory_preview = InventoryItem.objects.all()[:4]
+
     clear_sort_keys_from_filter(request)
     context = {
-        "current_page": "home"
+        "current_page": "home",
+        "inventory_preview": inventory_preview
     }
 
     return render(request, template, context)
