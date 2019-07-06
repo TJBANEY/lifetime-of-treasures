@@ -125,7 +125,10 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 
-# ======= FILEBROWSER =======#
+#========= EMAIL ===========#
+TO_EMAILS = ["timbaney1989@gmail.com", "altimeoftreasures@gmail.com"]
+
+#======= FILEBROWSER =======#
 FILEBROWSER_DIRECTORY = ''
 DIRECTORY = ''
 
