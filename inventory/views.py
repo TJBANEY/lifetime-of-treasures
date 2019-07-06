@@ -73,3 +73,16 @@ def inventory_catalog(request):
     }
 
     return render(request, template, context)
+
+def fetch_single_product_info(request, item_id):
+    if request.method == "GET":
+        inventory_item = InventoryItem.objects.get(id=item_id)
+
+        template = "ajax/product_modal.html"
+        ajax_template_context = {"inventory_item": inventory_item}
+        template_response = render_to_string(template, ajax_template_context, request)
+
+        response_context = {'product_modal_template': template_response}
+        return HttpResponse(json.dumps(response_context), content_type='application/json')
+
+    return HttpResponse(request, {"error": "Something went wrong, please contact the site admin"})
