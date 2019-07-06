@@ -3,6 +3,7 @@ from django.contrib import messages
 
 from contacts.forms import ContactForm
 
+
 def contact_form(request):
     template = 'contacts/contact.html'
     form = ContactForm()
