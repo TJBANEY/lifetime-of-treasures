@@ -34,6 +34,9 @@ button {
 .modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-target {
   min-width: 900px;
 }
+.modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info {
+  padding: 40px 30px;
+}
 .modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info h3 {
   font-family: Butler, sans-serif;
   color: #091D45;
@@ -90,9 +93,6 @@ button {
   text-align: center;
   margin-top: 25px;
 }
-.modal.fade .modal-dialog#mod-dia-interest {
-  background: yellow;
-}
 .modal.fade .modal-dialog#mod-dia-interest .modal-content #product-modal-info .interest-intro {
   font-family: Butler, sans-serif;
   color: #091D45;
@@ -110,7 +110,6 @@ button {
 }
 .modal.fade .modal-dialog#mod-dia-interest .modal-content #product-modal-info #product-media-object #product-image {
   padding: 0;
-  background-image: url('/media/inventory/thomaskinkade.jpg');
   background-size: cover;
   background-position: center;
 }
