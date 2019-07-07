@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # My Apps
     'lifetimeoftreasures',
     'contacts',
-    'page',
+    # 'page',
     'inventory',
     'filebrowser',
     # 'filebrowser_s3',
