@@ -47,6 +47,13 @@ button {
           #product-modal-info {
             padding: 40px 30px;
             
+            i {
+              position: absolute;
+              right: 35px;
+              top: 15px;
+              color: #C6A141;
+            }
+            
             h3 {
               font-family: Butler, sans-serif;
               color: #091D45;
@@ -122,10 +129,11 @@ button {
               font-weight: bold;
               letter-spacing: -0.15px;
               line-height: 24px;
-              margin: 0 0 20px 0;
+              padding: 20px;
             }
 
             #product-media-object {
+              padding: 0 20px;
               margin-bottom: 25px;
               
               .row {
@@ -133,6 +141,9 @@ button {
               }
 
               #product-image {
+                border-left: 1px solid #EDECEC;
+                border-top: 1px solid #EDECEC;
+                border-bottom: 1px solid #EDECEC;
                 padding: 0;
                 background-size: cover;
                 background-position: center;
@@ -164,6 +175,8 @@ button {
             }
             
             form {
+              padding: 0 20px 20px 20px;
+              
               button {
                 background: #091D45;
               }
@@ -392,22 +405,6 @@ button {
         .image {
           height: 315px;
           background-size: cover;
-
-          &.one {
-            background-image: url("/static/images/stock/lamp.jpg")
-          }
-
-          &.two {
-            background-image: url("/static/images/stock/chair.jpg")
-          }
-
-          &.three {
-            background-image: url("/static/images/stock/horse.jpg")
-          }
-
-          &.four {
-            background-image: url("/static/images/stock/armoire.jpg")
-          }
         }
 
         .info {

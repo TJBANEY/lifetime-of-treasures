@@ -37,6 +37,12 @@ button {
 .modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info {
   padding: 40px 30px;
 }
+.modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info i {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  color: #C6A141;
+}
 .modal.fade .modal-dialog#mod-dia-info .modal-content #product-modal-info h3 {
   font-family: Butler, sans-serif;
   color: #091D45;
@@ -100,15 +106,19 @@ button {
   font-weight: bold;
   letter-spacing: -0.15px;
   line-height: 24px;
-  margin: 0 0 20px 0;
+  padding: 20px;
 }
 .modal.fade .modal-dialog#mod-dia-interest .modal-content #product-modal-info #product-media-object {
+  padding: 0 20px;
   margin-bottom: 25px;
 }
 .modal.fade .modal-dialog#mod-dia-interest .modal-content #product-modal-info #product-media-object .row {
   margin: 0;
 }
 .modal.fade .modal-dialog#mod-dia-interest .modal-content #product-modal-info #product-media-object #product-image {
+  border-left: 1px solid #EDECEC;
+  border-top: 1px solid #EDECEC;
+  border-bottom: 1px solid #EDECEC;
   padding: 0;
   background-size: cover;
   background-position: center;
@@ -133,6 +143,9 @@ button {
   font-size: 15px;
   line-height: 20px;
   font-weight: 500;
+}
+.modal.fade .modal-dialog#mod-dia-interest .modal-content #product-modal-info form {
+  padding: 0 20px 20px 20px;
 }
 .modal.fade .modal-dialog#mod-dia-interest .modal-content #product-modal-info form button {
   background: #091D45;
@@ -329,18 +342,6 @@ button {
 .landing-section#gallery .gallery-item-container .gallery-item-card .image {
   height: 315px;
   background-size: cover;
-}
-.landing-section#gallery .gallery-item-container .gallery-item-card .image.one {
-  background-image: url("/static/images/stock/lamp.jpg");
-}
-.landing-section#gallery .gallery-item-container .gallery-item-card .image.two {
-  background-image: url("/static/images/stock/chair.jpg");
-}
-.landing-section#gallery .gallery-item-container .gallery-item-card .image.three {
-  background-image: url("/static/images/stock/horse.jpg");
-}
-.landing-section#gallery .gallery-item-container .gallery-item-card .image.four {
-  background-image: url("/static/images/stock/armoire.jpg");
 }
 .landing-section#gallery .gallery-item-container .gallery-item-card .info {
   height: 80px;
