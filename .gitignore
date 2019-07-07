@@ -5,9 +5,6 @@ package.json
 # Local Dev
 db.sqlite3
 
-# Static Assets
-/static
-
 # Compiled python files in all directories/sub-directories
 *.pyc
 
