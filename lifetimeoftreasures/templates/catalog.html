@@ -41,6 +41,17 @@
                 }
             })
         }
+
+        function productInterest(price, image, name){
+            var productImage = $("#product-image");
+            var productName = $("#product-details h3");
+            var productPrice = $("#product-details p");
+            var mediaPath = "/media/" + image;
+
+            productImage.css('background-image', 'url(' + mediaPath + ')')
+            productName.html(name);
+            productPrice.html("$" + price);
+        }
     </script>
 {% endblock %}
 
@@ -112,7 +123,7 @@
         <div class="modal-dialog" id="mod-dia-interest">
             <div class="modal-content">
                 <div id="product-modal-info">
-                    <i data-dismiss="modal" class="fal fa-times" style="position: absolute; right: 30px; top: 15px; color: #C6A141;"></i>
+                    <i data-dismiss="modal" class="fal fa-times" style="position: absolute; right: 25px; top: 15px; color: #C6A141;"></i>
 
                     <h3 class="interest-intro">Send us a message about</h3>
 
@@ -120,13 +131,13 @@
                         <div class="row">
                             <div id="product-image" class="col-2"></div>
                             <div id="product-details" class="col-10">
-                                <h3>Product Name</h3>
-                                <p>$99.00</p>
+                                <h3></h3>
+                                <p></p>
                             </div>
                         </div>
                     </div>
 
-                    <form method="post" action="contact/">
+                    <form method="post" action="/contact/">
                         {% csrf_token %}
 
                         <div class="row">
@@ -144,8 +155,7 @@
                                 <input type="text" name="phone" placeholder="Phone Number">
                             </label>
                             <label id="message" class="col-12">
-                                <textarea name="inquiry" rows="4" placeholder="Message">
-                                </textarea>
+                                <textarea name="inquiry" rows="4" placeholder="Message"></textarea>
                             </label>
                         </div>
 

@@ -1,6 +1,7 @@
 <div class="row">
     {% for item in inventory %}
-        <div class="col-3 gallery-item-container">
+        <div class="col-3 gallery-item-container" data-toggle="modal" onclick="fetchProduct({{ item.id }})"
+                         data-target="#product-info-modal">
             <div class="gallery-item-card">
                 <div class="image" style="background-image: url('/media/{{ item.image }}')"></div>
                 <div class="info">
@@ -19,10 +20,10 @@
         </a>
 
         <span class="page-set">
-                        {% for page in page_set %}
-                            <a href="?page={{ page }}">{{ page }}</a>
-                        {% endfor %}
-                    </span>
+            {% for page in page_set %}
+                <a href="?page={{ page }}">{{ page }}</a>
+            {% endfor %}
+        </span>
 
         <a class="next-arrow" {% if inventory.has_next %}href="?page={{ inventory.next_page_number }}{% endif %}">
             <i class="fal fa-long-arrow-right" style="color: #C6A141"></i>
