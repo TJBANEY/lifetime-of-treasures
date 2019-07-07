@@ -28,12 +28,16 @@ def landing_page(request):
 
 def temp_estate_sales_view(request):
     template = "temp/estate-sales.html"
-    context = {}
+    context = {
+        "current_page": "estate-sales"
+    }
 
     return render(request, template, context)
 
 def temp_about_us(request):
     template = "temp/about-us.html"
-    context = {}
+    context = {
+        "current_page": "about"
+    }
 
     return render(request, template, context)
