@@ -22,62 +22,23 @@ class DjangoSuitConfig(AppConfig):
     verbose_name = 'Django Suit'
     django_version = get_version()
     version = VERSION
-
-    # Menu and header layout - horizontal or vertical
     layout = 'horizontal'
-
-    # Set default list per page
     list_per_page = 20
-
-    # Show changelist top actions only if any row is selected
     toggle_changelist_top_actions = True
-
-    # Define menu
-    #: :type: list of suit.menu.ParentItem
     menu = []
-
-    # Automatically add home link
     menu_show_home = True
-
-    # Define callback / handler to change menu before it is getting rendered
     menu_handler = None
-
-    # Enables two column layout for change forms with submit row on the right
     form_submit_on_right = True
-
-    # Hide name/"original" column for all tabular inlines.
-    # May be overridden in Inline class by suit_form_inlines_hide_original = False
     form_inlines_hide_original = False
 
     # For size
     form_size = {
         'default': SUIT_FORM_SIZE_X_LARGE,
-        # 'fields': {}
         'widgets': {
             'RelatedFieldWidgetWrapper': SUIT_FORM_SIZE_XXX_LARGE
         }
-        # 'fieldsets': {}
     }
 
-    # form_size setting can be overridden in ModelAdmin using suit_form_size parameter
-    #
-    # Example:
-    # ----------------------------------------------
-    # suit_form_size = {
-    #     'default': 'col-xs-12 col-sm-2', 'col-xs-12 col-sm-10',
-    #     'fields': {
-    #          'field_name': SUIT_FORM_SIZE_LARGE,
-    #          'field_name2': SUIT_FORM_SIZE_X_LARGE,
-    #      },
-    #      'widgets': {
-    #          'widget_class_name': SUIT_FORM_SIZE_FULL,
-    #          'AdminTextareaWidget': SUIT_FORM_SIZE_FULL,
-    #      },
-    #      'fieldsets': {
-    #          'fieldset_name': SUIT_FORM_SIZE_FULL,
-    #          'fieldset_name2': SUIT_FORM_SIZE_FULL,
-    #      }
-    # }
 
     def __init__(self, app_name, app_module):
         self.setup_model_admin_defaults()
